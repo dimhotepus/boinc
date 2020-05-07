@@ -978,7 +978,7 @@ int get_filesystem_info(double &total_space, double &free_space, char* path) {
     return 0;
 }
 
-bool is_path_absolute(const std::string path) {
+bool is_path_absolute(const std::string& path) {
 #ifdef _WIN32
     if (path.length() >= 3 && isalpha(path[0]) && path[1] == ':' && (path[2] == '\\' || path[2] == '/')) {
         // c:\file

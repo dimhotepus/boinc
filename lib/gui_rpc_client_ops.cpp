@@ -2325,7 +2325,7 @@ int RPC_CLIENT::get_project_init_status(PROJECT_INIT_STATUS& pis) {
 }
 
 
-int RPC_CLIENT::get_project_config(std::string url) {
+int RPC_CLIENT::get_project_config(const std::string& url) {
     int retval;
     char buf[512];
     SET_LOCALE sl;

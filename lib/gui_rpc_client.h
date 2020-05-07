@@ -735,7 +735,7 @@ struct RPC_CLIENT {
     // call the second one periodically until it returns zero.
     // TODO: do project update
     //
-    int get_project_config(std::string url);
+    int get_project_config(const std::string& url);
     int get_project_config_poll(PROJECT_CONFIG&);
     int lookup_account(ACCOUNT_IN&);
     int lookup_account_poll(ACCOUNT_OUT&);
