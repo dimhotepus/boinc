@@ -101,7 +101,7 @@ void NOTICE::write(MIOFILE& f, bool for_gui) {
 void NOTICE::clear() {
     seqno = 0;
     safe_strcpy(title, "");
-    description = "";
+    description.clear();
     create_time = 0;
     arrival_time = 0;
     is_private = false;

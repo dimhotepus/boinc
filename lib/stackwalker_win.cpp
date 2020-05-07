@@ -490,10 +490,10 @@ int DebuggerInitialize( LPCSTR pszBOINCLocation, LPCSTR pszSymbolStore, BOOL bPr
     if (!tt) goto error;  // not enough memory...
 
     // build symbol search path from:
-    strCurrentDirectory = "";
-    strExecutableDirectory = "";
-    strLocalSymbolStore = "";
-    strSymbolSearchPath = "";
+    strCurrentDirectory.clear();
+    strExecutableDirectory.clear();
+    strLocalSymbolStore.clear();
+    strSymbolSearchPath.clear();
 
     // Detect Current Directory
     if ( GetCurrentDirectoryA( TTBUFLEN, tt ) ) {

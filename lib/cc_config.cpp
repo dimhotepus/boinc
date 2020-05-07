@@ -267,8 +267,8 @@ void CC_CONFIG::defaults() {
 
 int EXCLUDE_GPU::parse(XML_PARSER& xp) {
     bool found_url = false;
-    type = "";
-    appname = "";
+    type.clear();
+    appname.clear();
     device_num = -1;
     while (!xp.get_tag()) {
         if (!xp.is_tag) continue;

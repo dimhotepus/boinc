@@ -22,9 +22,9 @@ WSL::WSL() {
 }
 
 void WSL::clear() {
-    distro_name = "";
-    name = "";
-    version = "";
+    distro_name.clear();
+    name.clear();
+    version.clear();
     is_default = false;
 }
 

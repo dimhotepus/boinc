@@ -1225,11 +1225,11 @@ int ACCT_MGR_INFO::parse(XML_PARSER& xp) {
 }
 
 void ACCT_MGR_INFO::clear() {
-    acct_mgr_name = "";
-    acct_mgr_url = "";
+    acct_mgr_name.clear();
+    acct_mgr_url.clear();
     have_credentials = false;
     cookie_required = false;
-    cookie_failure_url = "";
+    cookie_failure_url.clear();
 }
 
 ACCT_MGR_RPC_REPLY::ACCT_MGR_RPC_REPLY() {
@@ -1403,7 +1403,7 @@ int ACCOUNT_OUT::parse(XML_PARSER& xp) {
 
 void ACCOUNT_OUT::clear() {
     error_num = 0;
-	error_msg = "";
+    error_msg.clear();
     authenticator.clear();
 }
 
@@ -2461,8 +2461,8 @@ int RPC_CLIENT::get_newer_version(std::string& version, std::string& version_dow
     char buf[256];
     RPC rpc(this);
 
-    version = "";
-    version_download_url = "";
+    version.clear();
+    version_download_url.clear();
 
     retval = rpc.do_rpc("<get_newer_version/>\n");
     if (!retval) {

@@ -918,7 +918,7 @@ UINT WINAPI diagnostics_message_monitor(LPVOID /* lpParameter */) {
 
                         dwRepeatMessageCounter = 0;
                         dwRepeatMessageProcessId = 0;
-                        strRepeatMessage = "";
+                        strRepeatMessage.clear();
                     } else {
                         // Let another application have a go at the message.
                         Sleep(0);
