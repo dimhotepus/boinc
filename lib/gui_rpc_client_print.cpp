@@ -306,12 +306,12 @@ void SIMPLE_GUI_INFO::print() {
     unsigned int i;
     printf("======== Projects ========\n");
     for (i=0; i<projects.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         projects[i]->print();
     }
     printf("\n======== Tasks ========\n");
     for (i=0; i<results.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         results[i]->print();
     }
 }
@@ -339,27 +339,27 @@ void CC_STATE::print() {
     unsigned int i;
     printf("======== Projects ========\n");
     for (i=0; i<projects.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         projects[i]->print();
     }
     printf("\n======== Applications ========\n");
     for (i=0; i<apps.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         apps[i]->print();
     }
     printf("\n======== Application versions ========\n");
     for (i=0; i<app_versions.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         app_versions[i]->print();
     }
     printf("\n======== Workunits ========\n");
     for (i=0; i<wus.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         wus[i]->print();
     }
     printf("\n======== Tasks ========\n");
     for (i=0; i<results.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         results[i]->print();
     }
     printf("\n======== Time stats ========\n");
@@ -413,7 +413,7 @@ void PROJECTS::print() {
     unsigned int i;
     printf("======== Projects ========\n");
     for (i=0; i<projects.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         projects[i]->print();
     }
 }
@@ -431,7 +431,7 @@ void DISK_USAGE::print() {
     printf("total: %f\n", d_total);
     printf("free: %f\n", d_free);
     for (i=0; i<projects.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         projects[i]->print_disk_usage();
     }
 }
@@ -440,7 +440,7 @@ void RESULTS::print() {
     unsigned int i;
     printf("\n======== Tasks ========\n");
     for (i=0; i<results.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         results[i]->print();
     }
 }
@@ -449,7 +449,7 @@ void FILE_TRANSFERS::print() {
     unsigned int i;
     printf("\n======== File transfers ========\n");
     for (i=0; i<file_transfers.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         file_transfers[i]->print();
     }
 }
@@ -458,7 +458,7 @@ void MESSAGES::print() {
     unsigned int i;
     printf("\n======== Messages ========\n");
     for (i=0; i<messages.size(); i++) {
-        printf("%d) -----------\n", i+1);
+        printf("%u) -----------\n", i+1);
         messages[i]->print();
     }
 }
