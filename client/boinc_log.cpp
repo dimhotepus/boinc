@@ -202,6 +202,10 @@ int main(int argc, char** argv) {
 
     // Open the new log file for output
     f = fopen(g_log_filename, "w");
+    if (!f) {
+      fprintf(stderr, "can't open %s for writing: %s\n", g_log_filename, strerror(errno));
+      exit(1);
+    }
     setbuf(f, NULL);
 
     while(true) {
@@ -265,6 +269,8 @@ int main(int argc, char** argv) {
 
         boinc_sleep(1.0);
     }
+
+    fclose(f);
 
 #if defined(_WIN32) && defined(USE_WINSOCK)
     WSACleanup();
